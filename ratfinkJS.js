@@ -15,6 +15,7 @@ function getDeck()
 		}
 	}
     console.log(deck)
+    console.log(deck.length)
 	return deck;
 }
 
@@ -43,39 +44,29 @@ function renderDeck()
 		var card = document.createElement("div");
 		var value = document.createElement("div");
 		var suit = document.createElement("div");
-		card.className = "card";
+        card.className = "card";
 		value.className = "value";
 		suit.className = "suit " + deck[i].Suit;
 
 		value.innerHTML = deck[i].Value;
 		card.appendChild(value);
 		card.appendChild(suit);
+        var img = document.createElement('img'); 
+        if (deck[i].Suit == 'hearts')
+		suitImage='./images/heartImage.png';
+		else if (deck[i].Suit == 'spades')
+		suitImage = './images/spadeImage.png';
+		else if (deck[i].Suit == 'diamonds')
+		suitImage = './images/diamondImage.png';
+		else
+		suitImage = './images/clubImage.png';
+        img.src = suitImage;
+        card.appendChild(img);
+
 
 		document.getElementById("deck").appendChild(card);
 	}
 }
-//  function renderDeck(deck)
-// {
-// 	document.getElementById('deck').innerHTML = '';
-
-// 	for(var i = 0; i < deck.length; i++)
-// 	{
-// 		var card = document.createElement("div");
-// 		var icon = '';
-// 		if (deck[i].Suit == 'hearts')
-// 		icon='./images/heartImage.png';
-// 		else if (deck[i].Suit == 'spades')
-// 		icon = './images/spadeImage.png';
-// 		else if (deck[i].Suit == 'diamonds')
-// 		icon = './images/diamondImage.png';
-// 		else
-// 		icon = './images/clubImage.png';
-
-// 		value.innerHTML = deck[i].Value + '' + icon;
-// 		card.className = 'card';
-// 	document.getElementById("deck").appendChild(card);
-// 	}
-// }
 
 function load()
 {
