@@ -13,7 +13,9 @@
     <div class="container-fluid">
         <div class="container-fluid">
             <ul class="nav">
-                <h1 class="header">Ratfink</h1>
+                <h1 class="header">
+                    <a class="Ratfink" href="https://andrewmflak.github.io/ratfinkJS/">Ratfink</a>
+                </h1>
                 <li class="nav-item">
                     <a class="nav-link active" href="./index.html">Home</a>
                 </li>
@@ -27,17 +29,19 @@
                     <a class="nav-link" href="./stats.html">Stats</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sign In</a>
+                    <a class="nav-link disabled" href="./signIn.html" hidden>Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sign Out</a>
+                    <a class="nav-link disabled" href="./signOut.html" hidden>Sign Out</a>
 
                 </li>
             </ul>
         </div>
         <div class="container-md">
             <div class="deck">
-                <p>Pete sucks pee pee</p>
+                <p>Pete likes the pee pee</p>
+                <p>Dominatrix</p>
+                <p>Schaef is safe</p>
                 <div id="deckCheck">Deck Check</div>
 
                 <a href="javascript:void(0)" class="btn" onclick="shuffle()">Shuffle</a>
@@ -114,26 +118,35 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- <table>
-                    <tr>
-                        <th>round</th>
-                        <th>Player1</th>
-                        <th>Player2</th>
-                        <th>Player3</th>
-                        <th>Player4</th>
-                    </tr>
-
-                </table>
-                <tr>1</tr>
-                <tr>2</tr>
-                <tr>3</tr> -->
-
             </div>
+        </div>
+        <div class="container-sm">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
         </div>
         <footer class="footer">
             © Dad's Ass - 2020
         </footer>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
