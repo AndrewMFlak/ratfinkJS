@@ -14,14 +14,19 @@ function getDeck()
 			deck.push(card);
 		}
 	}
-    console.log(deck)
-    console.log(deck.length)
+    console.log("deck log: " + deck)
 	return deck;
 }
 
 function shuffle()
 {
 	// for 1000 turns
+    var deckCheckDiv = document.createElement("div");
+    deckCheckDiv.className = "DeckCheckDivValue";
+    //using innerHTML
+    deckCheckDiv.innerHTML += deck.length;
+    //using 
+    document.getElementById("deckCheck").appendChild(deckCheckDiv);
 	// switch the values of two random cards
 	for (var i = 0; i < 1000; i++)
 	{

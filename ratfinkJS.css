@@ -1,11 +1,21 @@
 .deck
 {
 	width:50%;
-	margin: 20px auto;
-	background:dodgerblue;
-	border:solid 10px black;
-	padding: 10px;
-	border-radius:10px;
+	margin: 5px;
+	background:rgb(146, 166, 202);
+	border:solid 5px black;
+	padding: 5px;
+	border-radius:5px;
+	text-align: center;
+	color:white;
+}
+.scoreboard {
+	width: 30%;
+	margin: 5px;
+	background:rgb(146, 166, 202);
+	border:solid 2px black;
+	padding: 5px;
+	border-radius:5px;
 	text-align: center;
 	color:white;
 }
@@ -60,8 +70,8 @@
 	background-position-y:100px;
 }
 img {
-	width: 20px;
-	height: 30px;
+	width: 30px;
+	height: 40px;
 }
                 
             

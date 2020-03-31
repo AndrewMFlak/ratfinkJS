@@ -1,18 +1,35 @@
 <!DOCTYPE html>
+
 <head>
     <link rel="stylesheet" href="ratfinkJS.css">
     <script type="text/javascript" src="ratfinkJS.js"></script>
 </head>
 
 <body>
+    <nav>
+        <h1 class="header">Ratfink</h1>
+    </nav>
     <div class="deck">
-        <h1>A Deck of Cards</h1>
-        <br/>
         <p>Pete sucks</p>
-        <div id="deckCheck"></div>
+        <div id="deckCheck">Deck Check</div>
 
         <a href="javascript:void(0)" class="btn" onclick="shuffle()">Shuffle</a>
         <div id="deck"></div>
     </div>
+    <div class="scoreboard">
+        <table>
+            <th>round</th>
+            <th>Player1</th>
+            <th>Player2</th>
+            <th>Player3</th>
+            <th>Player4</th>
+        </table>
+    </div>
+    <footer class="footer">
+        Copyright: Dad's Ass - 2020
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </body>
+
 </html>
