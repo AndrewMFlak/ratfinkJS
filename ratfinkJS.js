@@ -58,9 +58,9 @@ function renderDeck()
 		card.appendChild(suit);
         var img = document.createElement('img'); 
         if (deck[i].Suit == 'hearts')
-		suitImage='./images/heartImage.png';
+		suitImage='./images/heartImage2.png';
 		else if (deck[i].Suit == 'spades')
-		suitImage = './images/spadeImage.png';
+		suitImage = './images/spadeImage2.png';
 		else if (deck[i].Suit == 'diamonds')
 		suitImage = './images/diamondImage.png';
 		else

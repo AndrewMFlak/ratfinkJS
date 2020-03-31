@@ -1,5 +1,12 @@
+.header {
+	position: relative;
+	font-weight: bold;
+	font-size: 36px;
+	text-align: center;
+}
 .deck
 {
+	display: block;
 	width:50%;
 	margin: 5px;
 	background:rgb(146, 166, 202);
@@ -10,6 +17,7 @@
 	color:white;
 }
 .scoreboard {
+	display: block;
 	width: 30%;
 	margin: 5px;
 	background:rgb(146, 166, 202);
@@ -72,6 +80,11 @@
 img {
 	width: 30px;
 	height: 40px;
+}
+.footer {
+	position: relative;
+	text-align: center;
+	font-size: 14px;
 }
                 
             
