@@ -17,15 +17,17 @@ function getDeck() {
 
 function shuffle() {
 	// for 1000 turns
-	var deckCheckDiv = document.createElement("div");
+	$(".DeckCheckDivValue").empty();
+	// var deckCheckDiv = document.getElementsByClassName("DeckCheckDivValue");
 	//clear DeckCheckDivValue HERE
-	deckCheckDiv.className = "DeckCheckDivValue";
+	// deckCheckDiv.className = "DeckCheckDivValue";
 	//using innerHTML
-	deckCheckDiv.innerHTML += deck.length;
+	// deckCheckDiv.innerHTML += deck.length;
 	//using 
-	document.getElementById("deckCheck").appendChild(deckCheckDiv);
+	$(".DeckCheckDivValue").text(deck.length);
+	// document.getElementsByClassName("DeckCheckDivValue").append(deckCheckDiv);
 	// switch the values of two random cards
-	for (var i = 0; i < deck.length; i++) {
+	for (var i = 0; i < 10000; i++) {
 		var location1 = Math.floor((Math.random() * deck.length));
 		var location2 = Math.floor((Math.random() * deck.length));
 		var tmp = deck[location1];
@@ -83,8 +85,37 @@ function renderDeck() {
 		card.appendChild(img);
 
 		document.getElementById("deck").appendChild(card);
+		// testDeck();
 	}
 }
+// function testDeck() {
+// 	document.getElementById('deckCheck').innerHTML = '';
+// 	for (var i = 0; i < deck.length; i++) {
+// 		var card = document.createElement("div");
+// 		var value = document.createElement("div");
+// 		var suit = document.createElement("div");
+// 		card.className = "card";
+// 		value.className = "value";
+// 		suit.className = "suit " + deck[i].Suit;
+
+// 		value.innerHTML = deck[i].Value;
+// 		card.appendChild(value);
+// 		card.appendChild(suit);
+// 		var img = document.createElement('img');
+// 		if (deck[i].Suit == 'hearts')
+// 			suitImage = './assets/images/heartImage2.png';
+// 		else if (deck[i].Suit == 'spades')
+// 			suitImage = './assets/images/spadeImage2.png';
+// 		else if (deck[i].Suit == 'diamonds')
+// 			suitImage = './assets/images/diamondImage.png';
+// 		else
+// 			suitImage = './assets/images/clubImage.png';
+// 		img.src = suitImage;
+// 		card.appendChild(img);
+
+// 		document.getElementById("deck").appendChild(card);
+// 	}
+// }
 
 function load() {
 	deck = getDeck();

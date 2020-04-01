@@ -11,22 +11,23 @@
 
 <body>
     <div class="container-fluid">
-        <div class="container-fluid">
+        <nav class="navbar navbar-light navbar-glass navbar-top sticky-kit navbar-expand-lg">
             <ul class="nav">
                 <h1 class="header">
                     <a class="Ratfink" href="https://github.com/AndrewMFlak/ratfinkJS">Ratfink</a>
                 </h1>
+                <br>
                 <li class="nav-item">
                     <a class="nav-link active" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Games</a>
+                    <a class="nav-link active" href="#">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./test.html">Test</a>
+                    <a class="nav-link active" href="./test.html">Test</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./stats.html">Stats</a>
+                    <a class="nav-link active" href="./stats.html">Stats</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="./signIn.html" hidden>Sign In</a>
@@ -36,20 +37,24 @@
 
                 </li>
             </ul>
-        </div>
-        <div class="container-md">
+        </nav>
+        <div class="container-sm">
             <div class="deck">
                 <p>Pete likes the pee pee</p>
                 <p>Dominatrix</p>
                 <p>Schaef is safe</p>
-                <div id="deckCheck">Deck Check</div>
+                <div id="deckCheck">
+                    <p>Deck Check</p>
+                    <div class="DeckCheckDivValue">
+                    </div>
+                </div>
 
                 <a href="javascript:void(0)" class="btn" onclick="shuffle()">Shuffle</a>
                 <a href="javascript:void(0)" class="btn" onclick="cutDeck()">Cut Deck</a>
                 <div id="deck"></div>
             </div>
         </div>
-        <div class="container-sm">
+        <!-- <div class="container-sm">
             <div class="scoreboard">
                 <table class="table">
                     <thead class="thead-dark">
@@ -119,18 +124,36 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> -->
         <div class="container-sm">
+            <!-- <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+                    attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.
+                </p>
+            </div> -->
             <form>
                 <div class="form-group">
-                  <label for="exampleInputUsername1">Username</label>
-                  <input type="email" class="form-control" id="exampleInputUsername1" >
+                    <div class="col-sm-4">
+                        <label for="textOutputMessageApp">Output</label>
+                        <ul id="messages"></ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="exampleInputUsername1">Username</label>
+                        <input type="email" class="form-control" id="exampleInputUsername1">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="textInput1">Input your chat text here...</label>
+                        <input type="password" class="form-control" id="textInput1">
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </form>
             <!-- <ul id="messages"></ul>
             <form action="">
@@ -141,9 +164,6 @@
             © Dad's Ass - 2020
         </footer>
     </div>
-    <script>
-        var socket = io();
-    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
