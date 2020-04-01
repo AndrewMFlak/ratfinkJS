@@ -52,7 +52,6 @@ function cutDeck() {
 		deck[location1] = deck[location2];
 		deck[location2] = tmp;
 	}
-
 	console.log("cut deck success")
 
 	renderDeck();
@@ -82,7 +81,6 @@ function renderDeck() {
 			suitImage = './assets/images/clubImage.png';
 		img.src = suitImage;
 		card.appendChild(img);
-
 
 		document.getElementById("deck").appendChild(card);
 	}
