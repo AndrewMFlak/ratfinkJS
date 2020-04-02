@@ -11,98 +11,258 @@
 
 <body>
     <div class="container-fluid">
-        <div class="container-fluid">
+        <nav class="navbar navbar-light navbar-glass navbar-top sticky-kit navbar-expand-lg">
             <ul class="nav">
                 <h1 class="header">
                     <a class="Ratfink" href="https://github.com/AndrewMFlak/ratfinkJS">Ratfink</a>
                 </h1>
+                <br>
                 <li class="nav-item">
                     <a class="nav-link active" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Games</a>
+                    <a class="nav-link active" href="#">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./test.html">Test</a>
+                    <a class="nav-link active" href="./test.html">Test</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./stats.html">Stats</a>
+                    <a class="nav-link active" href="./stats.html">Stats</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" hidden>Sign In</a>
+                    <a class="nav-link disabled" href="./signIn.html" hidden>Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" hidden>Sign Out</a>
+                    <a class="nav-link disabled" href="./signOut.html" hidden>Sign Out</a>
 
                 </li>
             </ul>
-        </div>
+        </nav>
         <div class="container-sm">
             <div class="scoreboard">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr class="tableHeader">
-                            <th scope="col">Canadom Analytics</th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
+                            <th scope="col">Deck TEST</th>
+                            <th scope="col">=========></th></th>
                         </tr>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Player1</th>
-                            <th scope="col">Player1</th>
-                            <th scope="col">Player2</th>
-                            <th scope="col">Player2</th>
-                            <th scope="col">Player3</th>
-                            <th scope="col">Player3</th>
-                            <th scope="col">Player4</th>
-                            <th scope="col">Player4</th>
-                            <th scope="col"></th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Round</th>
-                            <th scope="col">Bid</th>
-                            <th scope="col">Win</th>
-                            <th scope="col">Bid</th>
-                            <th scope="col">Win</th>
-                            <th scope="col">Bid</th>
-                            <th scope="col">Win</th>
-                            <th scope="col">Bid</th>
-                            <th scope="col">Win</th>
-                            <th scope="col">Dealer</th>
+                        <tr class="tableHeader">
+                            <th scope="col">Suit Check</th>
+                            <th scope="col">=========></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>Player 1</td>
-
+                            <th scope="row">Total Check: </th>
+                            <td class="DeckCountTotal"></td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>Player 2</td>
+                            <th scope="row">A - clubs</th>
+                            <td class="Aclubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">K - clubs</th>
+                            <td class="Kclubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Q - clubs</th>
+                            <td class="Qclubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">J - clubs</th>
+                            <td class="Jclubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10 - clubs</th>
+                            <td class="10clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9 - clubs</th>
+                            <td class="9clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8 - clubs</th>
+                            <td class="8clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7 - clubs</th>
+                            <td class="7clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6 - clubs</th>
+                            <td class="6clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5 - clubs</th>
+                            <td class="5clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4 - clubs</th>
+                            <td class="4clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3 - clubs</th>
+                            <td class="3clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2 - clubs</th>
+                            <td class="2clubs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">A - diamonds</th>
+                            <td class="Adiamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">K - diamonds</th>
+                            <td class="Kdiamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Q - diamonds</th>
+                            <td class="Qdiamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">J - diamonds</th>
+                            <td class="Jdiamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10 - diamonds</th>
+                            <td class="10diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9 - diamonds</th>
+                            <td class="9diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8 - diamonds</th>
+                            <td class="8diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7 - diamonds</th>
+                            <td class="7diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6 - diamonds</th>
+                            <td class="6diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5 - diamonds</th>
+                            <td class="5diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4 - diamonds</th>
+                            <td class="4diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3 - diamonds</th>
+                            <td class="3diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2 - diamonds</th>
+                            <td class="2diamonds"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">A - hearts</th>
+                            <td class="Ahearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">K - hearts</th>
+                            <td class="Khearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Q - hearts</th>
+                            <td class="Qhearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">J - hearts</th>
+                            <td class="Jhearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10 - hearts</th>
+                            <td class="10hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9 - hearts</th>
+                            <td class="9hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8 - hearts</th>
+                            <td class="8hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7 - hearts</th>
+                            <td class="7hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6 - hearts</th>
+                            <td class="6hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5 - hearts</th>
+                            <td class="5hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4 - hearts</th>
+                            <td class="4hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3 - hearts</th>
+                            <td class="3hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2 - hearts</th>
+                            <td class="2hearts"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">A - spades</th>
+                            <td class="Aspades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">K - spades</th>
+                            <td class="Kspades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Q - spades</th>
+                            <td class="Qspades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">J - spades</th>
+                            <td class="Jspades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10 - spades</th>
+                            <td class="10spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9 - spades</th>
+                            <td class="9spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8 - spades</th>
+                            <td class="8spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7 - spades</th>
+                            <td class="7spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6 - spades</th>
+                            <td class="6spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5 - spades</th>
+                            <td class="5spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4 - spades</th>
+                            <td class="4spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3 - spades</th>
+                            <td class="3spades"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2 - spades</th>
+                            <td class="2spades"></td>
                         </tr>
                     </tbody>
                 </table>
