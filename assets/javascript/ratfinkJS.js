@@ -75,13 +75,13 @@ function renderDeck() {
 		card.appendChild(suit);
 		var img = document.createElement('img');
 		if (deck[i].Suit == 'hearts')
-			suitImage = './assets/images/heartImage2.png';
+			suitImage = '../assets/images/heartImage2.png';
 		else if (deck[i].Suit == 'spades')
-			suitImage = './assets/images/spadeImage2.png';
+			suitImage = '../assets/images/spadeImage2.png';
 		else if (deck[i].Suit == 'diamonds')
-			suitImage = './assets/images/diamondImage.png';
+			suitImage = '../assets/images/diamondImage.png';
 		else
-			suitImage = './assets/images/clubImage.png';
+			suitImage = '../assets/images/clubImage.png';
 		img.src = suitImage;
 		card.appendChild(img);
 
