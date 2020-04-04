@@ -1,6 +1,25 @@
 var cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var suits = ["diamonds", "hearts", "spades", "clubs"];
+//user variable used to house users submitted by createUser form
+var users = [];
+
 var deck = new Array();
+
+
+//user functions
+$("#userSubmit").click(function (event) {
+	event.preventDefault();
+	var addInputUser = $("input[name$='userName']").val();
+	console.log("User Submit Function");
+	console.log(addInputUser);
+	users.push(addInputUser);
+	var userArrayCheck = users.length;
+	console.log(userArrayCheck);
+});
+
+// function loadDeck() {
+// 	getDeck();
+// }
 
 function getDeck() {
 	var deck = new Array();
@@ -18,8 +37,9 @@ function knock() {
 	console.log("I don't want to cut....go fuck yourself");
 }
 function shuffle() {
+	getDeck();
 	// for 1000 turns
-	$(".DeckCheckDivValue").empty();	
+	$(".DeckCheckDivValue").empty();
 	$(".DeckCheckDivValue").text(deck.length);
 	// document.getElementsByClassName
 	// switch the values of two random cards
@@ -92,170 +112,170 @@ function testDeck() {
 	console.log("Test Deck Success");
 	// console.log(deck.length);
 	$(".DeckCountTotal").text(deck.length);
-	for(i = 0 ; i < deck.length ; i++) {
+	for (i = 0; i < deck.length; i++) {
 		// console.log(deck[i]);
 		var testCard = deck[i].Value + deck[i].Suit;
 		console.log(testCard);
-		if(testCard == "Aclubs") {
+		if (testCard == "Aclubs") {
 			$(".Aclubs").text("present");
 		}
-		if(testCard == "Kclubs") {
+		if (testCard == "Kclubs") {
 			$(".Kclubs").text("present");
 		}
-		if(testCard == "Qclubs") {
+		if (testCard == "Qclubs") {
 			$(".Qclubs").text("present");
 		}
-		if(testCard == "Jclubs") {
+		if (testCard == "Jclubs") {
 			$(".Jclubs").text("present");
 		}
-		if(testCard == "10clubs") {
+		if (testCard == "10clubs") {
 			$(".10clubs").text("present");
 		}
-		if(testCard == "9clubs") {
+		if (testCard == "9clubs") {
 			$(".9clubs").text("present");
 		}
-		if(testCard == "8clubs") {
+		if (testCard == "8clubs") {
 			$(".8clubs").text("present");
 		}
-		if(testCard == "7clubs") {
+		if (testCard == "7clubs") {
 			$(".7clubs").text("present");
 		}
-		if(testCard == "6clubs") {
+		if (testCard == "6clubs") {
 			$(".6clubs").text("present");
 		}
-		if(testCard == "5clubs") {
+		if (testCard == "5clubs") {
 			$(".5clubs").text("present");
 		}
-		if(testCard == "4clubs") {
+		if (testCard == "4clubs") {
 			$(".4clubs").text("present");
 		}
-		if(testCard == "3clubs") {
+		if (testCard == "3clubs") {
 			$(".3clubs").text("present");
 		}
-		if(testCard == "2clubs") {
+		if (testCard == "2clubs") {
 			$(".2clubs").text("present");
 		}
-		if(testCard == "Adiamonds") {
+		if (testCard == "Adiamonds") {
 			$(".Adiamonds").text("present");
 		}
-		if(testCard == "Kdiamonds") {
+		if (testCard == "Kdiamonds") {
 			$(".Kdiamonds").text("present");
 		}
-		if(testCard == "Qdiamonds") {
+		if (testCard == "Qdiamonds") {
 			$(".Qdiamonds").text("present");
 		}
-		if(testCard == "Qdiamonds") {
+		if (testCard == "Qdiamonds") {
 			$(".Qdiamonds").text("present");
 		}
-		if(testCard == "Jdiamonds") {
+		if (testCard == "Jdiamonds") {
 			$(".Jdiamonds").text("present");
 		}
-		if(testCard == "10diamonds") {
+		if (testCard == "10diamonds") {
 			$(".10diamonds").text("present");
 		}
-		if(testCard == "9diamonds") {
+		if (testCard == "9diamonds") {
 			$(".9diamonds").text("present");
 		}
-		if(testCard == "8diamonds") {
+		if (testCard == "8diamonds") {
 			$(".8diamonds").text("present");
 		}
-		if(testCard == "7diamonds") {
+		if (testCard == "7diamonds") {
 			$(".7diamonds").text("present");
 		}
-		if(testCard == "6diamonds") {
+		if (testCard == "6diamonds") {
 			$(".6diamonds").text("present");
 		}
-		if(testCard == "5diamonds") {
+		if (testCard == "5diamonds") {
 			$(".5diamonds").text("present");
 		}
-		if(testCard == "4diamonds") {
+		if (testCard == "4diamonds") {
 			$(".5diamonds").text("present");
 		}
-		if(testCard == "4diamonds") {
+		if (testCard == "4diamonds") {
 			$(".4diamonds").text("present");
 		}
-		if(testCard == "3diamonds") {
+		if (testCard == "3diamonds") {
 			$(".3diamonds").text("present");
 		}
-		if(testCard == "2diamonds") {
+		if (testCard == "2diamonds") {
 			$(".2diamonds").text("present");
 		}
-		if(testCard == "Ahearts") {
+		if (testCard == "Ahearts") {
 			$(".Ahearts").text("present");
 		}
-		if(testCard == "Khearts") {
+		if (testCard == "Khearts") {
 			$(".Khearts").text("present");
 		}
-		if(testCard == "Qhearts") {
+		if (testCard == "Qhearts") {
 			$(".Qhearts").text("present");
 		}
-		if(testCard == "Jhearts") {
+		if (testCard == "Jhearts") {
 			$(".Jhearts").text("present");
 		}
-		if(testCard == "10hearts") {
+		if (testCard == "10hearts") {
 			$(".10hearts").text("present");
 		}
-		if(testCard == "9hearts") {
+		if (testCard == "9hearts") {
 			$(".9hearts").text("present");
 		}
-		if(testCard == "8hearts") {
+		if (testCard == "8hearts") {
 			$(".8hearts").text("present");
 		}
-		if(testCard == "7hearts") {
+		if (testCard == "7hearts") {
 			$(".7hearts").text("present");
 		}
-		if(testCard == "6hearts") {
+		if (testCard == "6hearts") {
 			$(".6hearts").text("present");
 		}
-		if(testCard == "5hearts") {
+		if (testCard == "5hearts") {
 			$(".5hearts").text("present");
 		}
-		if(testCard == "4hearts") {
+		if (testCard == "4hearts") {
 			$(".4hearts").text("present");
 		}
-		if(testCard == "3hearts") {
+		if (testCard == "3hearts") {
 			$(".3hearts").text("present");
 		}
-		if(testCard == "2hearts") {
+		if (testCard == "2hearts") {
 			$(".2hearts").text("present");
 		}
-		if(testCard == "Aspades") {
+		if (testCard == "Aspades") {
 			$(".Aspades").text("present");
 		}
-		if(testCard == "Kspades") {
+		if (testCard == "Kspades") {
 			$(".Kspades").text("present");
 		}
-		if(testCard == "Qspades") {
+		if (testCard == "Qspades") {
 			$(".Qspades").text("present");
 		}
-		if(testCard == "Jspades") {
+		if (testCard == "Jspades") {
 			$(".Jspades").text("present");
 		}
-		if(testCard == "10spades") {
+		if (testCard == "10spades") {
 			$(".10spades").text("present");
 		}
-		if(testCard == "9spades") {
+		if (testCard == "9spades") {
 			$(".9spades").text("present");
 		}
-		if(testCard == "8spades") {
+		if (testCard == "8spades") {
 			$(".8spades").text("present");
 		}
-		if(testCard == "7spades") {
+		if (testCard == "7spades") {
 			$(".7spades").text("present");
 		}
-		if(testCard == "6spades") {
+		if (testCard == "6spades") {
 			$(".6spades").text("present");
 		}
-		if(testCard == "5spades") {
+		if (testCard == "5spades") {
 			$(".5spades").text("present");
 		}
-		if(testCard == "4spades") {
+		if (testCard == "4spades") {
 			$(".4spades").text("present");
 		}
-		if(testCard == "3spades") {
+		if (testCard == "3spades") {
 			$(".3spades").text("present");
 		}
-		if(testCard == "2spades") {
+		if (testCard == "2spades") {
 			$(".2spades").text("present");
 		}
 	}
@@ -266,6 +286,6 @@ function load() {
 	shuffle();
 	renderDeck();
 }
-
+// load
 window.onload = load;
 
