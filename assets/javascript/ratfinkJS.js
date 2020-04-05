@@ -1,20 +1,73 @@
+
 var cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var suits = ["diamonds", "hearts", "spades", "clubs"];
 //user variable used to house users submitted by createUser form
 var users = [];
+var userObject ={"Player1":"","Player2":"","Player3":"","Player4":""};
 
 var deck = new Array();
+//API
+// var express = require('express');
+// const api = express();
+// app.listen(3000, function() {
+// 	console.log(`🌎  ==> API Server now listening on PORT 3000`);
+//     console.log('http://localhost:3000/');
+//     console.log('http://localhost:3001/api/users');
+//     console.log("https://sheltered-escarpment-60423.herokuapp.com/");
+// });
+// app.get('/', (req, res) => {
+//   console.log(req);
+//   res.send('Ratfink API up and running!!!');
+// });
+//============>
 
-
-//user functions
+//user submit functions from user.html page
 $("#userSubmit").click(function (event) {
 	event.preventDefault();
+	// var userNumber = 0;
+	// userNumber++;
 	var addInputUser = $("input[name$='userName']").val();
-	console.log("User Submit Function");
+	console.log("User Submit Function working");
+	// if(userNumber>4) {
+	// 	alert("game is full");
+	// 	kill;
+	// }
 	console.log(addInputUser);
+	//push to users array
 	users.push(addInputUser);
-	var userArrayCheck = users.length;
-	console.log(userArrayCheck);
+	//userObject
+	var newUserName = "";
+	if(!userObject["Player1"]) {
+		newUserName="Player1";
+		userObject[newUserName] = addInputUser;
+		userData = addInputUser;
+		// API.saveUser(userData);
+		$(".Player1").text("Player 1: " + addInputUser);
+	} else if(!userObject["Player2"]) {
+		newUserName="Player2";
+		userObject[newUserName] = addInputUser;
+		userData = addInputUser;
+		// API.saveUser(userData);
+		$(".Player2").text("Player 2: " + addInputUser);
+	} else if(!userObject["Player3"]) {
+		newUserName="Player3"; 
+		userObject[newUserName] = addInputUser;
+		userData = addInputUser;
+		// API.saveUser(userData);
+		$(".Player3").text("Player 3: " + addInputUser);
+	} else if(!userObject["Player4"]) {
+		newUserName="Player4";
+		userObject[newUserName] = addInputUser;
+		userData = addInputUser;
+		// API.saveUser(userData);
+		$(".Player4").text("Player 4: " + addInputUser);
+	} else {
+		alert("no more players....game is full beeitch!");
+	}
+	// userObject[newUserName] = addInputUser;
+	console.log(userObject);
+	// var userArrayCheck = users.length;
+	// console.log(userArrayCheck);
 });
 
 // function loadDeck() {
