@@ -3,7 +3,7 @@ var cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var suits = ["diamonds", "hearts", "spades", "clubs"];
 //user variable used to house users submitted by createUser form
 var users = [];
-var userObject ={"Player1":"","Player2":"","Player3":"","Player4":""};
+var userObject = { "Player1": "", "Player2": "", "Player3": "", "Player4": "" };
 
 var deck = new Array();
 //API
@@ -19,6 +19,13 @@ var deck = new Array();
 //   console.log(req);
 //   res.send('Ratfink API up and running!!!');
 // });
+//
+function userPost(addInputUser) {
+	let url = 'http://localhost:3001/api/users';
+	$.post(url, addInputUser, function (addInputUser, status) {
+		alert("POST RESPONSE ALERT - Data: " + addInputUser + "\nStatus: " + status);
+	});
+};
 //============>
 
 //user submit functions from user.html page
@@ -27,6 +34,7 @@ $("#userSubmit").click(function (event) {
 	// var userNumber = 0;
 	// userNumber++;
 	var addInputUser = $("input[name$='userName']").val();
+	userPost(addInputUser);
 	console.log("User Submit Function working");
 	// if(userNumber>4) {
 	// 	alert("game is full");
@@ -37,26 +45,26 @@ $("#userSubmit").click(function (event) {
 	users.push(addInputUser);
 	//userObject
 	var newUserName = "";
-	if(!userObject["Player1"]) {
-		newUserName="Player1";
+	if (!userObject["Player1"]) {
+		newUserName = "Player1";
 		userObject[newUserName] = addInputUser;
 		userData = addInputUser;
 		// API.saveUser(userData);
 		$(".Player1").text("Player 1: " + addInputUser);
-	} else if(!userObject["Player2"]) {
-		newUserName="Player2";
+	} else if (!userObject["Player2"]) {
+		newUserName = "Player2";
 		userObject[newUserName] = addInputUser;
 		userData = addInputUser;
 		// API.saveUser(userData);
 		$(".Player2").text("Player 2: " + addInputUser);
-	} else if(!userObject["Player3"]) {
-		newUserName="Player3"; 
+	} else if (!userObject["Player3"]) {
+		newUserName = "Player3";
 		userObject[newUserName] = addInputUser;
 		userData = addInputUser;
 		// API.saveUser(userData);
 		$(".Player3").text("Player 3: " + addInputUser);
-	} else if(!userObject["Player4"]) {
-		newUserName="Player4";
+	} else if (!userObject["Player4"]) {
+		newUserName = "Player4";
 		userObject[newUserName] = addInputUser;
 		userData = addInputUser;
 		// API.saveUser(userData);
