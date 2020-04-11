@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 // var controller = require('./controllers/controller');
 
 const app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 console.log(PORT)
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -18,6 +18,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
     process.env.MONGOD_URI||"mongodb://localhost/ratfink", {
         useNewUrlParser: true
+        //use UnifiedTopology has been depracated
         // useUnifiedToplogy:true
     }
 );

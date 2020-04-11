@@ -19,8 +19,16 @@ var deck = new Array();
 //   console.log(req);
 //   res.send('Ratfink API up and running!!!');
 // });
-//
+//    
+	
+
 function userPost(addInputUser) {
+	//cors workaround (https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe)
+	let headers = new Headers();
+	headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Authorization', 'Basic ' + base64.encode(username + ":" +  password));
+	headers.append('Origin','http://localhost:3000');
 	let url = 'http://localhost:3001/api/users';
 	$.post(url, addInputUser, function (addInputUser, status) {
 		alert("POST RESPONSE ALERT - Data: " + addInputUser + "\nStatus: " + status);
@@ -156,13 +164,13 @@ function renderDeck() {
 		card.appendChild(suit);
 		var img = document.createElement('img');
 		if (deck[i].Suit == 'hearts')
-			suitImage = '../assets/images/heartImage2.png';
+			suitImage = '../public/images/heartImage2.png';
 		else if (deck[i].Suit == 'spades')
-			suitImage = '../assets/images/spadeImage2.png';
+			suitImage = '../public/images/spadeImage2.png';
 		else if (deck[i].Suit == 'diamonds')
-			suitImage = '../assets/images/diamondImage.png';
+			suitImage = '../public/images/diamondImage.png';
 		else
-			suitImage = '../assets/images/clubImage.png';
+			suitImage = '../public/images/clubImage.png';
 		img.src = suitImage;
 		card.appendChild(img);
 
